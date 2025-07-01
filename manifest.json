@@ -1,0 +1,101 @@
+{
+  "dxt_version": "0.1",
+  "name": "things3-mcp",
+  "version": "1.0.0",
+  "display_name": "Things 3 MCP Server",
+  "description": "MCP server for Things 3 task management integration",
+  "long_description": "# Things 3 MCP Server\n\nA Model Context Protocol server that provides integration with the Things 3 task management application. Allows AI assistants to:\n\n- Create tasks and to-dos\n- Manage projects and areas\n- Search and retrieve tasks\n- Update task status and properties\n- Work with Things 3's natural language processing\n\nRequires Things 3 to be installed on macOS.",
+  "author": {
+    "name": "Things 3 Extension Developer",
+    "email": "developer@example.com"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["server/index.js"],
+      "env": {}
+    }
+  },
+  "tools": [
+    {
+      "name": "view_inbox",
+      "description": "View all tasks in Things 3 inbox"
+    },
+    {
+      "name": "view_today",
+      "description": "View all tasks scheduled for today"
+    },
+    {
+      "name": "view_projects",
+      "description": "View all projects in Things 3"
+    },
+    {
+      "name": "view_areas",
+      "description": "View all areas in Things 3"
+    },
+    {
+      "name": "create_task",
+      "description": "Create a new task in Things 3"
+    },
+    {
+      "name": "create_project",
+      "description": "Create a new project in Things 3"
+    },
+    {
+      "name": "create_area",
+      "description": "Create a new area in Things 3"
+    },
+    {
+      "name": "complete_task",
+      "description": "Mark a task as completed in Things 3"
+    },
+    {
+      "name": "search_tasks",
+      "description": "Search for tasks in Things 3"
+    },
+    {
+      "name": "move_task_to_inbox",
+      "description": "Move a task from today/other lists to inbox"
+    },
+    {
+      "name": "move_task_to_today",
+      "description": "Move a task from inbox to today"
+    },
+    {
+      "name": "move_task_to_project",
+      "description": "Move a task to a specific project"
+    },
+    {
+      "name": "move_task_to_area",
+      "description": "Move a task to a specific area"
+    },
+    {
+      "name": "edit_task",
+      "description": "Edit an existing task"
+    },
+    {
+      "name": "edit_project",
+      "description": "Edit an existing project"
+    },
+    {
+      "name": "backup_things3",
+      "description": "Create a backup of all Things 3 data"
+    },
+    {
+      "name": "restore_things3",
+      "description": "Restore Things 3 data from backup"
+    }
+  ],
+  "keywords": ["things3", "task-management", "productivity", "todo", "gtd"],
+  "license": "MIT",
+  "compatibility": {
+    "dxt_version": ">=0.1",
+    "platforms": ["darwin"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upup666/things3-mcp-dxt-extension.git"
+  }
+}
