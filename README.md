@@ -48,9 +48,13 @@ npm install
 ```
 
 ### Package as DXT Extension
+Since DXT CLI is not yet publicly available, create the package manually:
 ```bash
-dxt pack .
+# Create DXT package (ZIP format)
+zip -r things3-mcp-dxt-extension-v1.0.0.dxt . -x "*.git*" "*.DS_Store*" "*.dxt" ".claude/*" "reddit_post.md"
 ```
+
+**Important:** Exclude `.claude/` directory to avoid installation errors in Claude Desktop.
 
 ### Add to Host Application
 Add the extension to your MCP-compatible host's configuration:
